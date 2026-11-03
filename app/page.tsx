@@ -592,7 +592,7 @@ Pesan: ${message}`;
 
             <div className="product-price">
               <span>STARTING FROM</span>
-              <strong>Rp65.000–70.000</strong>
+              <strong>Rp45.000–55.000</strong>
               <small>
                 Harga menyesuaikan spesifikasi dan jumlah pesanan.
               </small>
