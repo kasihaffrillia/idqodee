@@ -3,10 +3,15 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   title: "IDQODE — Your Identity Goes Digital",
-  description: "IDQODE menyediakan layanan creative design dan solusi identitas digital, termasuk Digital Business Card dengan NFC dan QR Code.",
+  description:
+    "IDQODE menyediakan layanan creative design dan solusi identitas digital, termasuk Digital Business Card dengan NFC dan QR Code.",
 };
 
-export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
+export default function RootLayout({
+  children,
+}: Readonly<{
+  children: React.ReactNode;
+}>) {
   return (
     <html lang="id">
       <body>{children}</body>
