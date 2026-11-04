@@ -591,8 +591,8 @@ Pesan: ${message}`;
             </div>
 
             <div className="product-price">
-              <span>STARTING FROM</span>
-              <strong>Rp45.000–55.000</strong>
+              <span>HARGA HANYA (Include Desain dan Kartu NFC Fisik </span>
+              <strong>Rp55.000</strong>
               <small>
                 Harga menyesuaikan spesifikasi dan jumlah pesanan.
               </small>
