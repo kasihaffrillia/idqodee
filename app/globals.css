@@ -1,4 +1,18 @@
 
+@import "tailwindcss";
+
+:root {
+  --navy: #102a56;
+  --blue-dark: #173b70;
+  --blue: #3978c8;
+  --blue-light: #dceafa;
+  --blue-pale: #f1f7fd;
+}
+
+* {
+  box-sizing: border-box;
+}
+
 html {
   scroll-behavior: smooth;
   scroll-padding-top: 90px;
@@ -6,12 +20,9 @@ html {
 
 body {
   margin: 0;
-  background: #ffffff;
-}
-
-::selection {
-  background: #c6e0ff;
-  color: #102a56;
+  background: white;
+  color: var(--blue-dark);
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 button,
@@ -24,4 +35,332 @@ select {
 
 button {
   cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+}
+
+::selection {
+  background: #c6e0ff;
+  color: var(--navy);
+}
+
+.section-padding {
+  padding: 100px 20px;
+}
+
+.eyebrow {
+  color: var(--blue);
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.25em;
+}
+
+.eyebrow-light {
+  color: #a8d0ff;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.25em;
+}
+
+.section-title {
+  margin-top: 16px;
+  color: var(--blue-dark);
+  font-size: clamp(32px, 5vw, 48px);
+  font-weight: 800;
+  line-height: 1.15;
+  letter-spacing: -0.04em;
+}
+
+.body-copy {
+  color: #64748b;
+  font-size: 14px;
+  line-height: 2;
+}
+
+.hero-section {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(120deg, #102a56 0%, #173b70 65%, #24518a 100%);
+  color: white;
+}
+
+.hero-circle {
+  position: absolute;
+  border: 1px solid rgba(190, 220, 255, 0.12);
+  border-radius: 9999px;
+  pointer-events: none;
+}
+
+.circle-one {
+  width: 500px;
+  height: 500px;
+  top: -190px;
+  right: -100px;
+}
+
+.circle-two {
+  width: 350px;
+  height: 350px;
+  top: -110px;
+  right: -25px;
+}
+
+.primary-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  border-radius: 999px;
+  background: var(--blue-dark);
+  padding: 14px 22px;
+  color: white;
+  font-size: 12px;
+  font-weight: 800;
+  transition: all 0.25s ease;
+}
+
+.primary-button:hover {
+  background: #3978c8;
+  transform: translateY(-2px);
+}
+
+.light-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  border-radius: 999px;
+  background: #dcecff;
+  padding: 15px 24px;
+  color: var(--blue-dark);
+  font-size: 13px;
+  font-weight: 800;
+  transition: all 0.25s ease;
+}
+
+.light-button:hover {
+  background: white;
+  transform: translateY(-2px);
+}
+
+.outline-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  border-radius: 999px;
+  padding: 15px 24px;
+  color: white;
+  font-size: 13px;
+  font-weight: 700;
+  transition: all 0.25s ease;
+}
+
+.outline-button:hover {
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.mockup-area {
+  position: relative;
+  display: flex;
+  min-height: 245px;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border-radius: 18px;
+  background: linear-gradient(135deg, #eaf3ff, #c2dcfa);
+  padding: 24px;
+}
+
+.mockup-area::before,
+.mockup-area::after {
+  position: absolute;
+  width: 190px;
+  height: 190px;
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  border-radius: 50%;
+  content: "";
+}
+
+.mockup-area::before {
+  top: -90px;
+  right: -40px;
+}
+
+.mockup-area::after {
+  bottom: -110px;
+  left: -50px;
+}
+
+.mockup-card {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 300px;
+  min-height: 180px;
+  border-radius: 16px;
+  padding: 22px;
+  box-shadow: 0 20px 40px rgba(16, 42, 86, 0.2);
+}
+
+.nfc-card {
+  transform: rotate(-5deg);
+  background: linear-gradient(135deg, #173b70, #10264b);
+  color: white;
+}
+
+.carton-card {
+  transform: rotate(4deg);
+  border: 1px solid #dbeafe;
+  background: white;
+  color: #173b70;
+}
+
+.design-card {
+  background: rgba(255, 255, 255, 0.95);
+  color: #173b70;
+}
+
+.service-card {
+  border: 1px solid #dbeafe;
+  border-radius: 24px;
+  background: white;
+  padding: 32px;
+  transition: all 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-7px);
+  box-shadow: 0 20px 40px rgba(23, 59, 112, 0.08);
+}
+
+.service-icon {
+  display: flex;
+  width: 54px;
+  height: 54px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 17px;
+  background: #eaf3ff;
+  color: #3978c8;
+  font-size: 27px;
+}
+
+.product-card {
+  overflow: hidden;
+  border: 1px solid #dbeafe;
+  border-radius: 25px;
+  background: white;
+  transition: all 0.3s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px rgba(23, 59, 112, 0.09);
+}
+
+.option-button {
+  border: 1px solid #dbeafe;
+  border-radius: 999px;
+  background: white;
+  padding: 9px 16px;
+  color: #64748b;
+  font-size: 11px;
+  font-weight: 700;
+  transition: all 0.2s ease;
+}
+
+.option-button:hover {
+  border-color: #3978c8;
+}
+
+.option-active {
+  border-color: #173b70;
+  background: #173b70;
+  color: white;
+}
+
+.team-card {
+  border: 1px solid #dbeafe;
+  border-radius: 24px;
+  background: #f7faff;
+  padding: 25px 18px;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.team-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(23, 59, 112, 0.08);
+}
+
+.team-avatar {
+  display: flex;
+  width: 76px;
+  height: 76px;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #173b70, #6aa5e8);
+  color: white;
+  font-size: 28px;
+  font-weight: 800;
+}
+
+.form-label {
+  display: block;
+  margin-bottom: 9px;
+  color: #173b70;
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.form-input {
+  display: block;
+  width: 100%;
+  border: 1px solid #dbeafe;
+  border-radius: 12px;
+  background: #f8fbff;
+  padding: 14px 15px;
+  color: #334155;
+  font-size: 13px;
+  outline: none;
+  transition: border-color 0.2s ease;
+}
+
+.form-input:focus {
+  border-color: #3978c8;
+}
+
+.form-input::placeholder {
+  color: #94a3b8;
+}
+
+@media (max-width: 768px) {
+  .section-padding {
+    padding: 72px 20px;
+  }
+
+  .mockup-area {
+    min-height: 220px;
+    padding: 18px;
+  }
+
+  .mockup-card {
+    min-height: 165px;
+    padding: 18px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+  }
 }
