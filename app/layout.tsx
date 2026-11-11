@@ -1,10 +1,20 @@
+
 import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "IDQODE — Your Identity Goes Digital",
+  title: "IDQODE | Identitasmu, Kini Lebih Digital",
   description:
-    "IDQODE menyediakan layanan creative design dan solusi identitas digital, termasuk Digital Business Card dengan NFC dan QR Code.",
+    "IDQODE menyediakan jasa desain kartu nama, kartu NFC, dan kartu Art Carton dengan QR Code untuk kebutuhan identitas profesional.",
+  keywords: [
+    "IDQODE",
+    "Kartu Nama",
+    "Kartu NFC",
+    "QR Code",
+    "Desain Kartu Nama",
+    "Kartu Art Carton",
+  ],
+  authors: [{ name: "IDQODE" }],
 };
 
 export default function RootLayout({
